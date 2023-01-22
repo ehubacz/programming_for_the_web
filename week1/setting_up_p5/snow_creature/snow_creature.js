@@ -1,14 +1,22 @@
 let grid = undefined;
-//let stroke1 = prompt("enter a basic color name", "gray");
-//let stroke2 = prompt("enter another basic color", "purple");
+let fill1 = prompt("enter a basic color name","black");
+let fill2 = prompt("enter another basic color", "black");
 function setup() {
     createCanvas(1000, 800);
-    background("#ccc");
+    background("skyblue");
     grid = loadImage("images/100px_grid.png");
 }
 
 function draw() {
-background(grid);
+//background(grid);
+
+//background
+fill(300);
+stroke(225)
+ellipse(700, 1075, 1500);
+fill(300);
+stroke(225)
+ellipse(225, 1075, 1500);
 
 //snowman legs
 fill("white")
@@ -64,23 +72,105 @@ line(700, 500, 625, 375);
 
 /*CATERPILLAR STARTS HERE*/
 
-//caterpillar bulb2
-fill(255);
+//caterpillar bulb 6
+/*if (mouseIsPressed) {
+  fill("fill1");
+} else {
+  fill("fill2");
+}*/
+fill("fill1");
+stroke(150, 0, 150);
+strokeWeight(5);
+ellipse(275, 740, 100);
+//feet6
+strokeWeight(0)
+fill(0);
+ellipse(275, 790, 20);
+
+//caterpillar bulb 5
+fill("fill2");
+stroke(150, 0, 150);
+//feet5
+strokeWeight(5);
+ellipse(220, 740, 100);
+strokeWeight(0)
+fill(0);
+ellipse(220, 790, 20);
+
+//caterpillar bulb 4
+fill("fill1");
+stroke(150, 0, 150);
+strokeWeight(5);
+//feet4
+ellipse(175, 740, 100);
+strokeWeight(0)
+fill(0);
+ellipse(175, 790, 20);
+
+//caterpillar bulb 3
+strokeWeight(0)
+fill(0);
+ellipse(120, 790, 20);
+fill("fill2");
+//feet3
+stroke(150, 0, 150);
+strokeWeight(5);
+ellipse(120, 740, 100);
+strokeWeight(0)
+fill(0);
+ellipse(130, 750, 20);
+
+//caterpillar bulb 2
+fill("fill1");
 stroke(150, 0, 150);
 strokeWeight(5);
 ellipse(75, 690, 100);
+//feet2
+strokeWeight(0)
+fill(0);
+ellipse(60, 700, 20);
+strokeWeight(0)
+fill(0);
+ellipse(100, 700, 20);
 
 //caterpillar bulb 1
-fill(255);
+fill("fill2");
 stroke(150, 0, 150);
 strokeWeight(5);
 ellipse(120, 625, 100);
+//feet1
+strokeWeight(0)
+fill(0);
+ellipse(145, 640, 20);
+strokeWeight(0)
+fill(0);
+ellipse(100, 625, 20);
 
-//caterpillar neck
-fill(255);
+
+//caterpillar neck 0
+if (mouseIsPressed) {
+  fill("fill2")
+
+} else {
+   fill("fill1");
+}
 stroke(150, 0, 150);
 strokeWeight(5);
 ellipse(175, 575, 100);
+//feet0
+strokeWeight(0)
+fill(0);
+ellipse(150, 580, 20);
+strokeWeight(0)
+fill(0);
+ellipse(200, 590, 20);
+
+//leash
+noFill();
+stroke(175);
+strokeWeight(10);
+ellipse(300,505,30)
+arc(225, 520, 150, 75, 0, HALF_PI);
 
 //collar
 fill(0)
