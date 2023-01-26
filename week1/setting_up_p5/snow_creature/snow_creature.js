@@ -1,10 +1,21 @@
 let grid = undefined;
-let fill1 = prompt("enter a basic color name","black");
-let fill2 = prompt("enter another basic color", "black");
+let fill1 = prompt("enter a basic color name","purple");
+let fill2 = prompt("enter another basic color", "orange");
 function setup() {
     createCanvas(1000, 800);
     background("skyblue");
     grid = loadImage("images/100px_grid.png");
+}
+
+function draw() {
+  if (mouseIsPressed) {
+      fill(white);
+  } else {
+      noFill;
+  }
+  //stroke(180);
+  //blendMode(difference);
+  ellipse(mouseX, mouseY, 180, 180);
 }
 
 function draw() {
@@ -73,14 +84,14 @@ line(700, 500, 625, 375);
 /*CATERPILLAR STARTS HERE*/
 
 //caterpillar bulb 6
-/*if (mouseIsPressed) {
-  fill("fill1");
-} else {
-  fill("fill2");
-}*/
-fill("fill1");
 stroke(150, 0, 150);
 strokeWeight(5);
+if (mouseIsPressed) {
+  fill(fill1)
+
+} else {
+   fill(fill2);
+}
 ellipse(275, 740, 100);
 //feet6
 strokeWeight(0)
@@ -88,7 +99,12 @@ fill(0);
 ellipse(275, 790, 20);
 
 //caterpillar bulb 5
-fill("fill2");
+if (mouseIsPressed) {
+  fill(fill2)
+
+} else {
+   fill(fill1);
+}
 stroke(150, 0, 150);
 //feet5
 strokeWeight(5);
@@ -98,7 +114,12 @@ fill(0);
 ellipse(220, 790, 20);
 
 //caterpillar bulb 4
-fill("fill1");
+if (mouseIsPressed) {
+  fill(fill1)
+
+} else {
+   fill(fill2);
+}
 stroke(150, 0, 150);
 strokeWeight(5);
 //feet4
@@ -111,7 +132,12 @@ ellipse(175, 790, 20);
 strokeWeight(0)
 fill(0);
 ellipse(120, 790, 20);
-fill("fill2");
+if (mouseIsPressed) {
+  fill(fill2)
+
+} else {
+   fill(fill1);
+}
 //feet3
 stroke(150, 0, 150);
 strokeWeight(5);
@@ -121,7 +147,12 @@ fill(0);
 ellipse(130, 750, 20);
 
 //caterpillar bulb 2
-fill("fill1");
+if (mouseIsPressed) {
+  fill(fill1)
+
+} else {
+   fill(fill2);
+}
 stroke(150, 0, 150);
 strokeWeight(5);
 ellipse(75, 690, 100);
@@ -134,7 +165,12 @@ fill(0);
 ellipse(100, 700, 20);
 
 //caterpillar bulb 1
-fill("fill2");
+if (mouseIsPressed) {
+  fill(fill2)
+
+} else {
+   fill(fill1);
+}
 stroke(150, 0, 150);
 strokeWeight(5);
 ellipse(120, 625, 100);
@@ -149,10 +185,10 @@ ellipse(100, 625, 20);
 
 //caterpillar neck 0
 if (mouseIsPressed) {
-  fill("fill2")
+  fill(fill1)
 
 } else {
-   fill("fill1");
+   fill(fill2);
 }
 stroke(150, 0, 150);
 strokeWeight(5);
@@ -178,10 +214,27 @@ strokeWeight(0);
 ellipse(198, 520, 90);
 
 //caterpillar head
-fill(255);
+if (mouseIsPressed) {
+  fill(fill2)
+
+} else {
+   fill(fill1);
+}
 stroke(150, 0, 150);
 strokeWeight(5)
 ellipse(200, 500, 100);
+
+//antenea
+//left
+stroke(150, 0, 150);
+strokeWeight(5);
+line(160, 410, 180, 450);
+//right
+line(250, 410, 225, 453);
+//bulbs
+strokeWeight(3);
+ellipse(160, 410, 35);
+ellipse(250, 410, 35);
 
 //caterpillar eyes
 stroke(0);
@@ -190,9 +243,7 @@ point(175, 500);
 point(225, 500);
 
 //caterpillar mouth
-stroke(255, 0, 0)
+stroke(225, 10, 100)
 ellipse(200, 520, 20)
-
-
 
 }
