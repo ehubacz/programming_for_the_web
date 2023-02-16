@@ -40,7 +40,9 @@ window.setTimeout(() => {
         }
 
     }, speed);
+
 }, 3000);
+
 
 
 
