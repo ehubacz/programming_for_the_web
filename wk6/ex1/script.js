@@ -3,8 +3,15 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
-            name: "Emma",
-            Hubacz: true
+            name: "Emma"
         }
     }
 }).mount("#myApp");
+
+createApp ({
+    data() {
+        return {
+            name:"Foureyes"
+        }
+    }
+}).mount("#hatersApp")
