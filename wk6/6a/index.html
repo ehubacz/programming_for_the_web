@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <link rel="stylesheet" href="https://use.typekit.net/gri1lhc.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Vue Page of Facts</title>
 </head>
 <body>
+    <div id="myApp">
+
+        <h1 v-if="llama === true">What to know about the average llama</h1>
+            <li>{{fact1}}</li>
+            <li>{{fact2}}</li>
+            <li>{{fact3}}</li>
+            <li>{{fact4}}</li>
+            <li>{{fact5}}</li>
+            <li>{{fact6}}</li>
+            <li>{{fact7}}</li>
+            <li>{{fact8}}</li>
+            <li>{{fact9}}</li>
+            <li>{{fact10}}</li>
+    </div>
     <script src="script.js"></script>
-    <h1>Hello Friend</h1>
 
 </body>
 </html>
