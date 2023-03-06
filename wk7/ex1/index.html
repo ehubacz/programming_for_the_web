@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/ex1/style.css">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>CSS in Vue</title>
+</head>
+
+<body>
+    <div id="myApp" v-cloak>
+        <nav>
+            <ul>
+                <li v-bind:class="{active: currentRoute==='llamas'}"> <a v-bind:href= "llama">Llamas</a></li>
+                <li v-bind:class="{active: currentRoute==='alpacas'}"> <a v-bind:href= "alpaca">Alpacas</a></li>
+            </ul>
+        </nav> 
+    </div>
+
+   
+   
+    <script src="script.js"></script>
+    
+</body>
+</html>
