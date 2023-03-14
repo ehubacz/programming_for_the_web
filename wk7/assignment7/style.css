@@ -1,0 +1,26 @@
+* {
+    font-family: "new-order", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1 {
+    text-align: center;
+    font-family: "new-order", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.table {
+    margin: 1rem;
+    text-align: center;
+}
+td {
+    padding: .5rem;
+    border: 1px dotted black;
+}
+.even {
+    background: #beebab;
+}
+#description {
+    text-align: left;
+    font-style: oblique;
+}
