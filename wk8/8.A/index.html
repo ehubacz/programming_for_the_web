@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Plant Collection</title>
+</head>
+
+<body> 
+    
+    <div id="myApp" class="container" v-cloak>
+    <h1>Plant Collection</h1>
+    <div class="collectionWrapper">
+        <div class="collectionRow header">
+            <div class="cell commonName">Common Name</div>
+            <div class="cell fact">Fact</div>
+            <div class="cell genus">Genus</div>
+            <div class="cell origin">Place of Origin</div>
+            <div class="cell dateCollected">Date Collected</div>
+        </div>
+    <div class="collectionRow" v-for="(plant, index) in plants"
+    v-bind:class="{odd: index % 2 !== 0, owned: plant.collected}"> 
+        <div class="cell plant-commonName">{{plant.commonName}}</div>
+        <div class="cell plant-fact">{{plant.fact}}</div>
+        <div class="cell plant-genus">{{plant.genus}}</div>
+        <div class="cell plant-origin">{{plant.origin}}</div>
+        <div class="cell plant-dateCollected">{{plant.dateCollected}}</div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <form v-on:submit="submitHandler">
+        <fieldset>
+            <legend>Add a plant to the collection</legend>
+            <div>
+                <label for="commonName"></label>
+                <input id="commonName" type="text" v-model="newPlantObj.commonName">
+            </div>
+            <div>
+                <label for="fact"></label>
+                <input id="fact" type="text" v-model="newPlantObj.fact">
+            </div>
+            <div>
+                <label for="genus"></label>
+                <input id="genus" type="text" v-model="newPlantObj.genus">
+            </div>
+            <div>
+                <label for="origin"></label>
+                <input id="origin" type="text" v-model="newPlantObj
+                .origin">
+            </div>
+            <div>
+                <label for="dateCollected"></label>
+                <input id="dateCollected" type="date" v-model="newPlantObj.dateCollected">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
