@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Forms wk8 ex1</title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="container">
+
+        <h1>{{title}}</h1>
+        <div class="newitem">
+            <ul>
+                <li><label for="">Add an item</label>
+                <input v-model="newItem" type="text" id="newAlpaca">
+                </li>
+
+                <li><label for="">Priority Level</label>
+                <select v-model="newItemPriority">
+                    <option vaule="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                </li>
+            </ul>
+        </div>
+            
+
+        <div class="output">
+            <small>Item to add</small>
+            <p>{{newItem}}</p>
+            <p>Priority Level {{newItemPriority}}</p>
+        </div>
+            
+            <ul>
+                <li v-for="todo in todoItems" key="todo.id" class="card m-2 p-2">{{alpaca.label}}</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
