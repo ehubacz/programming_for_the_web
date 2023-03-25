@@ -8,12 +8,13 @@
     <title>Computed Props</title>
 </head>
 <body>
-    <div id="myApp">
-        <div id="app">
-        <h2>My Favorite Restaurant</h2>
-        <p><strong>Chashu</strong></p>
-        <p v-cloak>{{fullAddress}}</p>
-        </div>
+    <div id="app">
+        <label>First Name<input v-model="firstName" type="text">
+        </label>
+        <label>Last Name<input v-model="lastName" type="text">
+        </label>
+        <p v-cloak>{{firstName}} {{lastName}}</p>
+
     </div>
     <script src="script.js"></script>
 </body>
